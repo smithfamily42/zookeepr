@@ -7,6 +7,9 @@ const {
 } = require("../lib/animals.js");
 const { animals } = require("../data/animals");
 const { allowedNodeEnvironmentFlags } = require("process");
+const { jest } = require("@jest/globals");
+
+jest.mock('fs');
 
 test("creates an animal object", () => {
     const animal = createNewAnimal(
